@@ -16,7 +16,7 @@ ga('send', 'pageview');
 
 <header>
 <img src="http://vectorlogofree.com/wp-content/uploads/2013/01/canadian-olympic-team-logo-vector-400x400.png" width="100px" height="80px">
-<h1 class="liketext">SportPro</h1>
+<h1 class="liketext">BEC Sports</h1>
 
 </header>
 
@@ -77,7 +77,7 @@ $conn->close();
 </div>
 
 <footer>
-  <p>Copyright 2016-2020 by VG corporation. All Rights Reserved.</p>
+  <p>Copyright 2015-2019 by BEC-BGK. All Rights Reserved.</p>
 </footer>
 
 </body>

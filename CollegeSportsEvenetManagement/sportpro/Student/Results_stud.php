@@ -85,7 +85,7 @@ $conn->close();
 </div>
 </div>
 <footer>
-  <p>Copyright 2016-2020 by VG corporation. All Rights Reserved.</p>
+  <p>Copyright 2015-2019 by BEC-BGK. All Rights Reserved.</p>
 </footer>
 
 </body>
