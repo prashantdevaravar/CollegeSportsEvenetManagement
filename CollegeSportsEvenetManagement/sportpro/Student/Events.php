@@ -40,16 +40,13 @@ ga('send', 'pageview');
   <h1>Events</h1>                          
 
 <?php
-$servername = "localhost";
-$username = 'root';
-$password = '';
-$dbname = "college_sports";
-// Create connection
-$conn = new mysqli($servername, $username, $password,$dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+$host="localhost";
+$user="root";
+$password="";
+$db="id1298591_sportpro";
+ 
+$conn=mysqli_connect($host,$user,$password);
+mysqli_select_db($conn,$db);
 //echo "Connected successfully";
 // Check connection
 $sql = "SELECT * FROM event where status='ongoing' ORDER BY end_date asc";
@@ -60,8 +57,8 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
 		echo '<div style="align:center; box-shadow: 10px 10px 5px #888888; padding-left:10px;border:1px; border-radius:5px;background-color:#d6e4f9"><form action="register.php" method="post">';
-        echo "<br><b>Event Name: </b>" . $row["event_name"]."<br> <b>Type: </b>" . $row["TYPE"]. "<br> <b>Description:</b> " . $row["description"]."<br><b> Registration Last Date: </b>" . $row["end_date"]."<br><b> Timing:</b> " . $row["TIME"];
-		echo '<input type="hidden" name="event" value='.$row["event_name"].'><input type="hidden" name="type" value='.$row["TYPE"].'>';
+        echo "<br><b>Event Name: </b>" . $row["event_name"]."<br> <b>Type: </b>" . $row["type"]. "<br> <b>Description:</b> " . $row["description"]."<br><b> Registration Last Date: </b>" . $row["end_date"]."<br><b> Timing:</b> " . $row["time"];
+		echo '<input type="hidden" name="event" value='.$row["event_name"].'><input type="hidden" name="type" value='.$row["type"].'>';
 		echo '<br><input type="submit" value="register"><br><br></form></div><br><br>';  
 
   }

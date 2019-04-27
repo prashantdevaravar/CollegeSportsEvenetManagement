@@ -5,16 +5,18 @@ $description=$_POST['description'];
 $start_date=$_POST['start_date'];
 $end_date=$_POST['end_date'];
 $time=$_POST['time'];
-$servername = "localhost";
-$username = 'id1298591_sportpro';
-$password = '11111';
-$dbname = "id1298591_sportpro";
+$host="localhost";
+$user="root";
+$password="";
+$db="id1298591_sportpro";
+ 
+$conn=mysqli_connect($host,$user,$password);
+mysqli_select_db($conn,$db);
+
 // Create connection
-$conn = new mysqli($servername, $username, $password,$dbname);
+
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+
 //echo "Connected successfully";
 $sql = "INSERT INTO event(event_name,type,description,start_date,end_date,time,status)
 VALUES ('$event_name','$type','$description','$start_date','$end_date','$time','ongoing')";
