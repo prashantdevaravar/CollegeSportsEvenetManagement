@@ -5,16 +5,17 @@ $name=$_POST['name'];
 $email=$_POST['email'];
 $class=$_POST['class'];
 $contact=$_POST['contact'];
-$servername = "localhost";
-$username = 'id1298591_sportpro';
-$password = '11111';
-$dbname = "id1298591_sportpro";
-// Create connection
-$conn = new mysqli($servername, $username, $password,$dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+
+
+$host="localhost";
+$user="root";
+$password="";
+$db="id1298591_sportpro";
+ 
+$conn=mysqli_connect($host,$user,$password);
+mysqli_select_db($conn,$db);
+
+
 //echo "Connected successfully";
 $sql = "select * from entry where event='$event_name' and email='$email'";
 $result =$conn->query($sql);

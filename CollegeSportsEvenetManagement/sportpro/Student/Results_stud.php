@@ -1,13 +1,11 @@
 <?php
-$servername = "localhost";
-$username = 'id1298591_sportpro';
-$password = '11111';
-$dbname = "id1298591_sportpro";
-// Create connection
-$conn = new mysqli($servername, $username, $password,$dbname);// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+$host="localhost";
+$user="root";
+$password="";
+$db="id1298591_sportpro";
+ 
+$conn=mysqli_connect($host,$user,$password);
+mysqli_select_db($conn,$db);
 //echo "Connected successfully";
 // Check connection
 $sql = "SELECT * FROM result1";
